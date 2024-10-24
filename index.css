@@ -1,0 +1,230 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: "Arial", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  /* background-color: #4CAF50; Herbal green */
+  background-image: linear-gradient(
+    47deg,
+    hsl(136, 65%, 51%),
+    hsl(192, 70%, 51%)
+  );
+  color: white;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ddd;
+}
+
+#searchinp {
+  margin-left: 20px;
+  border: none;
+}
+
+/* Burger Icon for Mobile */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+}
+
+/* slider */
+.slider {
+  position: relative;
+  max-width: 100%;
+  height: 90vh;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 90vh;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.herbsContainer{
+  background-image: linear-gradient(
+    180deg,
+    hsl(136, 65%, 51%),
+    hsl(192, 70%, 51%)
+  );
+  width: 98%;
+  border-radius: 20px;
+  height:100vh;
+  margin: 20px auto;
+  padding: 13px;
+}
+
+.firstPlant{
+  width: 45%;
+  height: 400px;
+  margin-top: 20px;
+  background-color:#c1c1c19c;
+  border-radius: 20px;
+}
+
+.dd{
+  width: 100%;
+  height: 380px;
+  border-radius: 20px;
+}
+
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 61vh;
+    top: 80px;
+    background-color: hsl(136, 65%, 51%);
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    transform: translateX(0%);
+    z-index: 1;
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav-links.active {
+    /* transform: translateX(0%); */
+    display: none;
+  }
+}
+
+/*  test  */
+/* .searchbox {
+  background-color: #fffbf8;
+  padding: 10px;
+  width: 230px;
+  margin-top: -10px;
+  margin-left: 20px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
+    0 10px 15px 0 rgba(126, 126, 126, 0.12),
+    0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+    0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+  -moz-box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
+    0 10px 15px 0 rgba(126, 126, 126, 0.12),
+    0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+    0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+  box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
+    0 10px 15px 0 rgba(126, 126, 126, 0.12),
+    0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+    0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+} */
+input[type="search"] {
+  width: 250px;
+  height: 30px;
+  padding-left: 15px;
+  margin-left: 20px;
+  border-radius: 6px;
+  border: none;
+  color: #939393;
+  font-weight: 500;
+  background-color: #fffbf8;
+  /* -webkit-box-shadow: 0 -2px 2px 0 rgba(199, 199, 199, 0.55), 0 1px 1px 0 #fff,
+    0 2px 2px 1px #fafafa, 0 2px 4px 0 #b2b2b2 inset, 0 -1px 1px 0 #f2f2f2 inset,
+    0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
+  -moz-box-shadow: 0 -2px 2px 0 rgba(199, 199, 199, 0.55), 0 1px 1px 0 #fff,
+    0 2px 2px 1px #fafafa, 0 2px 4px 0 #b2b2b2 inset, 0 -1px 1px 0 #f2f2f2 inset,
+    0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
+  box-shadow: 0 -2px 2px 0 rgba(199, 199, 199, 0.55), 0 1px 1px 0 #fff,
+    0 2px 2px 1px #fafafa, 0 2px 4px 0 #b2b2b2 inset, 0 -1px 1px 0 #f2f2f2 inset,
+    0 15px 15px 0 rgba(41, 41, 41, 0.09) inset; */
+}
+button[type="submit"] {
+  /* width: 35px;
+  height: 30px; */
+  /* background-image: url(/Virtual-Herbal-Garden/img/search\ icon.png);
+  background-repeat: no-repeat;
+  background-position: 10px 5px;
+  background-color: transparent;
+  -webkit-background-size: 20px 20px;
+  background-size: 20px 20px; */
+  border: none;
+  cursor: pointer;
+}
+input[type="search"]:focus {
+  outline: 0;
+}

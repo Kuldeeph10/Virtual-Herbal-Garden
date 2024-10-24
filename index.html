@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Herbal Garden</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">Herbal Garden</a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#plants">Plants</a></li>
+        <li><a href="#ayush">AYUSH Systems</a></li>
+        <!-- <li><a href="#consultation">Consultations</a></li> -->
+        <li><a href="#contact">Contact</a></li>
+        <!-- <input type="search" placeholder="search plants" id="searchinp"> -->
+        <!-- <form class="searchbox" action="http://thecodeblock.com"> -->
+        <input type="search" placeholder="Search" />
+        <!-- <button type="submit" value="search">Go</button>
+        </form> -->
+      </ul>
+      <div class="burger" id="burger" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+    <!-- slider -->
+    <div class="slider">
+      <div class="slides">
+        <div class="slide active">
+          <img src="img/img 01.avif" alt="Image 1" />
+        </div>
+        <div class="slide">
+          <img src="img/img 02.jpg" alt="Image 2" />
+        </div>
+        <div class="slide">
+          <img src="img/img 03.jpg" alt="Image 3" />
+        </div>
+        <div class="slide">
+          <img src="img/img 04.webp" alt="Image 3" />
+        </div>
+      </div>
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <!-- Imp herbs plants -->
+
+    <div class="herbsContainer">
+      <h1>Some Medicinal Plants</h1>
+      <div class="firstPlant">
+        <model-viewer src="img/aloe_vera_plant.glb" camera-controls class="dd"></model-viewer>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
